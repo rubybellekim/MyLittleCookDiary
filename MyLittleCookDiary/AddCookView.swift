@@ -7,6 +7,7 @@
 
 import SwiftUI
 import PhotosUI
+import SwiftData
 
 struct AddCookView: View {
     @Environment(\.modelContext) var modelContext
@@ -86,7 +87,7 @@ struct AddCookView: View {
                     }
                 }
                 
-                Section("Write a review") {
+                Section("Leave a note") {
                     TextEditor(text: $review)
                     
                     Text("\(typedCharacters) / \(characterLimit)")

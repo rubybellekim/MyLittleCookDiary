@@ -17,7 +17,7 @@ struct Buttons: ButtonStyle {
                 LinearGradient(gradient: Gradient(colors: [Color.pink, Color.yellow, Color.green, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
             )
             .foregroundColor(.white)
-            .cornerRadius(50)
+            .cornerRadius(7)
             .shadow(radius: 5)
             .opacity(configuration.isPressed ? 0.7 : 1.0)
     }

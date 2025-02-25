@@ -14,6 +14,6 @@ struct MyLittleCookDiaryApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Cook.self)
+        .modelContainer(for: [Cook.self, Comment.self])
     }
 }

@@ -14,6 +14,11 @@ struct Themes {
     static let myOrange = Color(red: 1.0, green: 0.8, blue: 0.6)   // Warm pastel orange
     
     static let myGradient = LinearGradient(gradient: Gradient(colors: [Themes.myPink, Themes.myGreen, Themes.myOrange, .blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    
+    static let largeTitleFont = Font.custom("Arial Rounded MT Bold", size: 48)
+    static let titleFont = Font.custom("Arial Rounded MT Bold", size: 20)
+    static let bodyFont = Font.custom("Chalkboard SE", size: 18)
+    static let captionFont = Font.custom("Chalkboard SE", size: 14)
 }
 
 extension View {

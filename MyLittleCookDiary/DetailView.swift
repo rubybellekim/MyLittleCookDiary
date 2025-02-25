@@ -11,20 +11,22 @@ import SwiftUI
 struct DetailView: View {
     @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
+    
     @State private var showingDeleteAlert = false
+    @State private var showingCommentSheet = false
     
     let cook: Cook
-    
+            
     var body: some View {
         ScrollView {
             ZStack(alignment: .bottomTrailing) {
                 if let imageData = cook.imageData, let uiImage = UIImage(data: imageData) {
-                            Image(uiImage: uiImage)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(height: 250)
-                                        .cornerRadius(10)
-                                        .padding()
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 250)
+                        .cornerRadius(10)
+                        .padding()
                 } else {
                     //default placeholder when there's no image
                     ZStack {
@@ -48,31 +50,34 @@ struct DetailView: View {
                 }
                 
                 Text(cook.genre.uppercased())
+                    .font(Themes.captionFont)
                     .fontWeight(.black)
-                    .padding(8)
+                    .padding(7)
                     .foregroundColor(.white)
-                    .background(.black.opacity(0.75))
+                    .background(.black.opacity(0.65))
                     .clipShape(.capsule)
                     .offset(x: -25, y: -25)
             }
-
+            
             Text("Added on \(cook.dateAdded?.formatted(date: .long, time: .shortened) ?? "[Unknown]")")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .padding(.bottom, 5)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .padding(.bottom, 5)
             
             Text(cook.review)
-                .padding()
+                .padding(.horizontal, 18)
+                .padding(.vertical, 12)
+                .font(Themes.bodyFont)
             
             RatingView(rating: .constant(cook.rating))
                 .font(.largeTitle)
                 .padding(.bottom, 30)
             
-            Button("New version") {
-                
+            Button("Comments") {
+                showingCommentSheet = true
             }
-            .padding()
             .buttonStyle(Buttons())
+            
         }
         .navigationTitle(cook.title)
         .navigationBarTitleDisplayMode(.inline)
@@ -88,6 +93,9 @@ struct DetailView: View {
                 showingDeleteAlert = true
             }
         }
+        .sheet(isPresented: $showingCommentSheet) {
+            CommentView(cook: cook)
+        }
         .tint(.black)
     }
     
@@ -101,7 +109,7 @@ struct DetailView: View {
     do {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Cook.self, configurations: config)
-        let example = Cook(title: "Test Cook", genre: "Italian 🍝", review: "This was a great book; I really enjoyed it.", rating: 5, imageData: nil, dateAdded: Date())
+        let example = Cook(title: "Test Cook", genre: "Italian 🍝", review: "This was a great one; I really enjoyed it.", rating: 5, imageData: nil, dateAdded: Date())
         
         return DetailView(cook: example)
             .modelContainer(container)

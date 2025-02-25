@@ -8,6 +8,8 @@
 import Foundation
 import SwiftData
 
+
+
 @Model
 class Cook {
     var title: String
@@ -17,6 +19,9 @@ class Cook {
     var imageData: Data?
     var dateAdded: Date?
     
+    @Relationship(deleteRule: .cascade) // Deletes comments when the cook is deleted
+        var comments: [Comment] = []
+        
     init(title: String, genre: String, review: String, rating: Int, imageData: Data? = nil, dateAdded: Date? = nil) {
         self.title = title
         self.genre = genre
@@ -26,3 +31,6 @@ class Cook {
         self.dateAdded = dateAdded ?? Date()
     }
 }
+
+
+#imageLiteral(resourceName: "simulator_screenshot_A77DCF2A-A2D9-4208-936C-798FACF55844.png")

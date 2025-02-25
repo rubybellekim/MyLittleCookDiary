@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2830415A2D6CFE4100B5E5E0 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283041592D6CFE4100B5E5E0 /* CommentView.swift */; };
+		286FCECD2D6E443D00882452 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286FCECC2D6E443D00882452 /* Comment.swift */; };
 		289991312D67AC370005D895 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289991302D67AC370005D895 /* Themes.swift */; };
 		28AA01912D67EA600018BD5B /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA01902D67EA600018BD5B /* Buttons.swift */; };
 		28B40D5D2D669D4E008257B2 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B40D5C2D669D4E008257B2 /* RatingView.swift */; };
@@ -18,9 +20,12 @@
 		28DE97AC2D65492A008DB0AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DE97AB2D65492A008DB0AC /* ContentView.swift */; };
 		28DE97AE2D65492B008DB0AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DE97AD2D65492B008DB0AC /* Assets.xcassets */; };
 		28DE97B12D65492B008DB0AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DE97B02D65492B008DB0AC /* Preview Assets.xcassets */; };
+		28E3CA392D6D510100229508 /* CookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E3CA382D6D510100229508 /* CookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		283041592D6CFE4100B5E5E0 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		286FCECC2D6E443D00882452 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		289991302D67AC370005D895 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		28AA01902D67EA600018BD5B /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		28B40D5C2D669D4E008257B2 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
@@ -35,6 +40,7 @@
 		28DE97AB2D65492A008DB0AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		28DE97AD2D65492B008DB0AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28DE97B02D65492B008DB0AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		28E3CA382D6D510100229508 /* CookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +77,12 @@
 				28B40D682D669F7F008257B2 /* MyLittleCookDiary.entitlements */,
 				28DE97A92D65492A008DB0AC /* MyLittleCookDiaryApp.swift */,
 				28DE97AB2D65492A008DB0AC /* ContentView.swift */,
+				28E3CA382D6D510100229508 /* CookView.swift */,
 				28B40D5E2D669D89008257B2 /* AddCookView.swift */,
 				28B40D642D669DA4008257B2 /* Cook.swift */,
+				286FCECC2D6E443D00882452 /* Comment.swift */,
 				28B40D662D669DAC008257B2 /* DetailView.swift */,
+				283041592D6CFE4100B5E5E0 /* CommentView.swift */,
 				28B40D5C2D669D4E008257B2 /* RatingView.swift */,
 				28B40D622D669D9C008257B2 /* EmojiRatingView.swift */,
 				289991302D67AC370005D895 /* Themes.swift */,
@@ -169,7 +178,10 @@
 				28B40D652D669DA4008257B2 /* Cook.swift in Sources */,
 				28DE97AC2D65492A008DB0AC /* ContentView.swift in Sources */,
 				289991312D67AC370005D895 /* Themes.swift in Sources */,
+				286FCECD2D6E443D00882452 /* Comment.swift in Sources */,
+				28E3CA392D6D510100229508 /* CookView.swift in Sources */,
 				28B40D632D669D9C008257B2 /* EmojiRatingView.swift in Sources */,
+				2830415A2D6CFE4100B5E5E0 /* CommentView.swift in Sources */,
 				28DE97AA2D65492A008DB0AC /* MyLittleCookDiaryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
